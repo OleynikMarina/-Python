@@ -11,6 +11,6 @@ dict_json = json.loads(response.text)
 def currency_rates(val):
     if val in content:
         print(f"Курс {val} = {dict_json['Valute'][val]['Value']}")
-    else: return None
+    else: print('Неверный формат')
 
 currency_rates('EUR')
